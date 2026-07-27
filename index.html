@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jesús Gregorio Trujillo Camacho — Portfolio</title>
   
-  <!-- Tailwind CSS por CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Tipografías de Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,20 +20,22 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             mono: ['Fira Code', 'monospace'],
-          },
-          colors: {
-            brand: {
-              dark: '#0B0F17',
-              card: '#111827',
-              border: '#1F2937',
-              accent: '#38BDF8',
-              purple: '#A855F7',
-            }
           }
         }
       }
     }
   </script>
+  
+  <style>
+    /* Transición suave para modales y hover */
+    .tech-tag {
+      transition: all 0.2s ease-in-out;
+    }
+    .tech-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+    }
+  </style>
 </head>
 <body class="bg-[#0B0F17] text-slate-300 font-sans min-h-screen py-10 px-4 sm:px-6">
 
@@ -41,29 +43,30 @@
   <main class="max-w-5xl mx-auto space-y-6">
 
     <!-- 1. HERO SECTION -->
-    <section class="bg-[#111827] border border-slate-800 rounded-xl p-6 sm:p-8 relative overflow-hidden">
-      <!-- Indicador de ubicación / status -->
+    <section class="bg-[#111827] border border-slate-800 rounded-xl p-6 sm:p-8 relative overflow-hidden shadow-2xl">
+      <!-- Status Bar -->
       <div class="flex items-center gap-2 font-mono text-xs text-cyan-400 mb-4 tracking-wider uppercase">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
         ROSARIO, ARGENTINA // DISPONIBLE FULL-TIME
       </div>
 
-      <!-- Nombre y Titular -->
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">
+      <!-- Nombre -->
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2 tracking-tight">
         Jesús Gregorio Trujillo Camacho
       </h1>
-      <p class="text-purple-400 font-semibold text-lg mb-4">
-        Abogado (UCA) & Licenciatura en Ciberdefensa (FADENA)
+      
+      <!-- Titular con tu texto exacto preferido -->
+      <p class="text-purple-400 font-semibold text-lg mb-4 font-mono">
+        Abogado (UCA) | Cursando Lic. en Ciberdefensa (FADENA)
       </p>
 
-      <!-- Resumen Profesional -->
+      <!-- Resumen -->
       <p class="text-slate-400 text-sm leading-relaxed max-w-3xl mb-6">
         Profesional con perfil híbrido enfocado en la resolución de desafíos complejos de <strong class="text-slate-200">gobernanza (GRC)</strong>, <strong class="text-slate-200">ciberdefensa técnica y derecho informático</strong>. Experiencia práctica en simulación de entorno de red industrial, administración de sistemas (Linux/Windows), análisis de registros y automatización defensiva con Python.
       </p>
 
-      <!-- Botones de Acción (Redes + Descarga de CV) -->
+      <!-- Botones de Acción -->
       <div class="flex flex-wrap items-center gap-3 font-mono text-xs">
-        <!-- BOTÓN DESCARGAR CV (Destacado) -->
         <a href="CV_Jesus_Trujillo.pdf" download class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-lg border border-purple-400/30 transition shadow-lg shadow-purple-950/50">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -72,23 +75,21 @@
         </a>
 
         <a href="https://github.com/trujilloJT93" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition">
-          💻 github
+          💻 GitHub
         </a>
         <a href="https://linkedin.com" target="_blank" class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition">
-          💼 linkedin
+          💼 LinkedIn
         </a>
         <a href="mailto:tu-email@dominio.com" class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition">
-          ✉️ email
+          ✉️ Email
         </a>
       </div>
     </section>
 
 
-    <!-- 2. PILARES PROFESIONALES (GRID 2 COLUMNAS) -->
+    <!-- 2. DUALIDAD (PILARS) -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <!-- Visión Legal & Compliance -->
-      <div class="bg-[#111827] border border-slate-800 rounded-xl p-6">
+      <div class="bg-[#111827] border border-slate-800 rounded-xl p-6 hover:border-purple-500/40 transition">
         <div class="flex items-center gap-2 text-purple-400 font-semibold mb-2">
           <span>⚖️</span>
           <h3>Visión Legal & Compliance</h3>
@@ -99,8 +100,7 @@
         </p>
       </div>
 
-      <!-- Ciberdefensa Técnica -->
-      <div class="bg-[#111827] border border-slate-800 rounded-xl p-6">
+      <div class="bg-[#111827] border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
         <div class="flex items-center gap-2 text-cyan-400 font-semibold mb-2">
           <span>🛡️</span>
           <h3>Ciberdefensa Técnica</h3>
@@ -110,43 +110,50 @@
           Formación operativa enfocada en arquitectura de redes de datos, captura y análisis de tráfico de red, hardening de sistemas operativos y programación de herramientas defensivas orientadas a la automatización.
         </p>
       </div>
-
     </div>
 
 
-    <!-- 3. STACK TÉCNICO & COMPETENCIAS -->
+    <!-- 3. STACK TÉCNICO INTERACTIVO (Haz clic en cualquier tag) -->
     <section class="bg-[#111827] border border-slate-800 rounded-xl p-6">
-      <div class="flex items-center gap-2 text-slate-200 font-semibold mb-4">
-        <span>⚙️</span>
-        <h3>Stack Técnico & Competencias</h3>
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2 text-slate-200 font-semibold">
+          <span>⚙️</span>
+          <h3>Stack Técnico & Competencias</h3>
+        </div>
+        <span class="text-[11px] font-mono text-cyan-400/80 bg-cyan-950/50 border border-cyan-800/40 px-2 py-0.5 rounded">
+          💡 Haz clic en una tecnología
+        </span>
       </div>
       
+      <!-- Tags Interactivos -->
       <div class="flex flex-wrap gap-2 font-mono text-xs">
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300">Python 3</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300">FastAPI</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300">SQLAlchemy</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300">Linux (Debian/Ubuntu)</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300">Windows Server</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300">Redes TCP/IP</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-amber-300">Seguridad OT/ICS</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-amber-300">Wireshark</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300">Análisis de Logs & RegEx</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300">Bash Scripting</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300">Git / GitHub</span>
-        <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-purple-300">Evidencia Digital</span>
+        <button onclick="showTechInfo('Python 3')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300 hover:border-cyan-400">Python 3</button>
+        <button onclick="showTechInfo('FastAPI')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300 hover:border-cyan-400">FastAPI</button>
+        <button onclick="showTechInfo('SQLAlchemy')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300 hover:border-cyan-400">SQLAlchemy</button>
+        <button onclick="showTechInfo('Linux')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Linux (Debian/Ubuntu)</button>
+        <button onclick="showTechInfo('Windows Server')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Windows Server</button>
+        <button onclick="showTechInfo('Redes TCP/IP')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Redes TCP/IP</button>
+        <button onclick="showTechInfo('Seguridad OT/ICS')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-amber-300 hover:border-amber-400">Seguridad OT/ICS</button>
+        <button onclick="showTechInfo('Wireshark')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-amber-300 hover:border-amber-400">Wireshark</button>
+        <button onclick="showTechInfo('Análisis de Logs')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Análisis de Logs & RegEx</button>
+        <button onclick="showTechInfo('Bash Scripting')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Bash Scripting</button>
+        <button onclick="showTechInfo('Git')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Git / GitHub</button>
+        <button onclick="showTechInfo('Evidencia Digital')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-purple-300 hover:border-purple-400">Evidencia Digital</button>
       </div>
     </section>
 
 
     <!-- 4. DESARROLLOS TÉCNICOS & INGENIERÍA APLICADA -->
     <section class="bg-[#111827] border border-slate-800 rounded-xl p-6 space-y-6">
-      <div class="flex items-center gap-2 text-slate-200 font-semibold border-b border-slate-800 pb-3">
-        <span class="text-cyan-400 font-mono">>_</span>
-        <h3>Desarrollos Técnicos & Ingeniería Aplicada</h3>
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-2 text-slate-200 font-semibold">
+          <span class="text-cyan-400 font-mono">>_</span>
+          <h3>Desarrollos Técnicos & Ingeniería Aplicada</h3>
+        </div>
       </div>
 
       <!-- FLAGSHIP PROJECT: SentinelOT -->
-      <div class="bg-[#0B0F17] border border-amber-500/40 rounded-xl p-6 relative">
+      <div class="bg-[#0B0F17] border border-amber-500/40 rounded-xl p-6 relative hover:border-amber-500/70 transition">
         <div class="flex items-center justify-between mb-3">
           <div class="flex items-center gap-2">
             <span>📡</span>
@@ -180,11 +187,9 @@
         </a>
       </div>
 
-      <!-- OTROS PROYECTOS (GRID 2 COLUMNAS) -->
+      <!-- OTROS PROYECTOS -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
-        <!-- Multithreaded Port Scanner -->
-        <div class="bg-[#0B0F17] border border-slate-800 rounded-lg p-5">
+        <div class="bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition">
           <div class="flex items-center gap-2 font-semibold text-white text-sm mb-2">
             <span>🔬</span>
             <h4>Multithreaded Port Scanner</h4>
@@ -202,8 +207,7 @@
           </a>
         </div>
 
-        <!-- Security Log Parsing Engine -->
-        <div class="bg-[#0B0F17] border border-slate-800 rounded-lg p-5">
+        <div class="bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition">
           <div class="flex items-center gap-2 font-semibold text-white text-sm mb-2">
             <span>🛡️</span>
             <h4>Security Log Parsing Engine</h4>
@@ -220,15 +224,12 @@
             🐙 Código Fuente
           </a>
         </div>
-
       </div>
     </section>
 
 
     <!-- 5. PRÁCTICAS OPERATIVAS & FORMACIÓN -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <!-- Prácticas Operativas -->
       <section class="bg-[#111827] border border-slate-800 rounded-xl p-6">
         <div class="flex items-center gap-2 text-purple-400 font-semibold mb-4 text-sm">
           <span>🔮</span>
@@ -251,7 +252,6 @@
         </div>
       </section>
 
-      <!-- Formación Académica -->
       <section class="bg-[#111827] border border-slate-800 rounded-xl p-6">
         <div class="flex items-center gap-2 text-amber-400 font-semibold mb-4 text-sm">
           <span>🎓</span>
@@ -265,20 +265,87 @@
           <hr class="border-slate-800">
           <div>
             <h4 class="font-bold text-slate-100 text-sm">Licenciatura en Ciberdefensa</h4>
-            <p class="text-slate-400">Facultad de la Defensa Nacional (FADENA) <span class="text-amber-400 font-mono">[En curso]</span></p>
+            <p class="text-slate-400">Facultad de la Defensa Nacional (FADENA) <span class="text-cyan-400 font-mono">[En curso]</span></p>
           </div>
         </div>
       </section>
-
     </div>
 
 
-    <!-- PIE DE PÁGINA -->
+    <!-- FOOTER -->
     <footer class="text-center font-mono text-xs text-slate-500 pt-6 pb-2">
       © Jesús Gregorio Trujillo Camacho — Rosario, Santa Fe, Argentina
     </footer>
 
   </main>
+
+
+  <!-- MODAL INTERACTIVO DE TERMINAL (Oculto por defecto) -->
+  <div id="techModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+    <div class="bg-[#0B0F17] border border-cyan-500/40 rounded-xl max-w-md w-full p-6 shadow-2xl relative font-mono text-xs">
+      
+      <!-- Window Controls -->
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500 inline-block cursor-pointer" onclick="closeTechModal()"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+        </div>
+        <span id="modalTechTitle" class="text-cyan-400 font-bold text-sm"></span>
+      </div>
+
+      <!-- Command Line Output -->
+      <div class="space-y-3">
+        <p class="text-slate-400">$ sentinel-ot --inspect <span id="modalTechCmd" class="text-emerald-400"></span></p>
+        <div id="modalTechDesc" class="bg-slate-900/90 p-3 rounded border border-slate-800 text-slate-300 leading-relaxed"></div>
+      </div>
+
+      <!-- Close Button -->
+      <button onclick="closeTechModal()" class="mt-5 w-full py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded text-center transition">
+        Cerrar Inspección
+      </button>
+    </div>
+  </div>
+
+
+  <!-- SCRIPT INTERACTIVO EN JAVASCRIPT -->
+  <script>
+    const techData = {
+      'Python 3': 'Uso de Python para automatización defensiva, scripts de parsing de logs, interacción con sockets de red y desarrollo de backend asíncrono en SentinelOT.',
+      'FastAPI': 'Implementación de APIs REST asíncronas de alto rendimiento con validación estricta de tipos Pydantic, documentación OpenAPI automática y autenticación JWT.',
+      'SQLAlchemy': 'Mapeo objeto-relacional (ORM) para gestión eficiente y segura de bases de datos relacionales en aplicaciones de monitoreo y auditoría.',
+      'Linux': 'Administración de servidores Linux (Debian/Ubuntu), hardening de kernel, gestión de permisos, usuarios y análisis de procesos activos en entorno de servidor.',
+      'Windows Server': 'Conocimiento en administración de directivas de grupo (GPO), Active Directory básico y revisión de registros de eventos (Event Viewer) para auditoría.',
+      'Redes TCP/IP': 'Comprensión profunda del modelo OSI/TCP-IP, análisis de flujos de red, ruteo básico, inspección de puertos y diagnóstico de conectividad.',
+      'Seguridad OT/ICS': 'Especialización en supervisión y protección de entornos de control industrial (SCADA/PLC), análisis de riesgos en redes operativas no aisladas.',
+      'Wireshark': 'Captura y disección avanzada de tráfico de red (PCAP). Filtrado mediante expresiones de captura/despliegue para detección de anomalías y exfiltración.',
+      'Análisis de Logs': 'Creación de expresiones regulares (RegEx) complejas para la extracción de patrones de ataque en auth.log, syslog y servidores web.',
+      'Bash Scripting': 'Automatización de tareas repetitivas en Linux, monitoreo de recursos en tiempo real y parsing rápido de texto mediante grep, awk y sed.',
+      'Git': 'Control de versiones distribuido, flujo de trabajo con ramas (feature branch), documentación clara en repositorios y gestión de cambios.',
+      'Evidencia Digital': 'Aplicación de conocimientos jurídicos-técnicos para la preservación, extracción y custodia de evidencia digital cumpliendo estándares procedimentales.'
+    };
+
+    function showTechInfo(tech) {
+      const modal = document.getElementById('techModal');
+      document.getElementById('modalTechTitle').innerText = tech;
+      document.getElementById('modalTechCmd').innerText = `"${tech.toLowerCase()}"`;
+      document.getElementById('modalTechDesc').innerText = techData[tech] || 'Información de competencia no disponible.';
+      
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeTechModal() {
+      const modal = document.getElementById('techModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    // Cerrar modal al presionar ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeTechModal();
+    });
+  </script>
 
 </body>
 </html>
