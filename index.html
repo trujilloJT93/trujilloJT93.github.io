@@ -21,7 +21,7 @@
             
             --text-title: #f8fafc;
             --text-body: #cbd5e1;
-            --text-muted: #64748b;
+            --text-muted: #94a3b8;
             
             --accent-blue: #38bdf8;
             --accent-teal: #2dd4bf;
@@ -129,7 +129,7 @@
             color: var(--accent-blue);
         }
 
-        /* GRID DE IMPACTO / PERFIL HÍBRIDO */
+        /* GRID DE IMPACTO */
         .dual-impact {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -206,7 +206,7 @@
             font-size: 0.8em;
         }
 
-        /* ESTILOS DE PROYECTOS */
+        /* ESTILOS DE PROYECTOS Y PRÁCTICAS */
         .project-list {
             display: flex;
             flex-direction: column;
@@ -262,12 +262,49 @@
             font-size: 0.88em;
             color: var(--text-muted);
             margin: 8px 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .metrics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .metrics-list li {
+            font-size: 0.86em;
+            color: var(--text-body);
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .metrics-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
         }
 
         .secondary-projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 16px;
+        }
+
+        /* AUDIT & LABS CARD */
+        .lab-card {
+            border: 1px solid var(--border-subtle);
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .lab-title {
+            font-size: 0.98em;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin: 0 0 8px 0;
         }
 
         footer {
@@ -290,7 +327,7 @@
             <h1>Jesús Gregorio Trujillo Camacho</h1>
             <div class="subtitle">Abogado (UCA) & Licenciatura en Ciberdefensa (FADENA)</div>
             <p class="bio">
-                Profesional con perfil híbrido orientado a la intersección entre <b>derecho informático, gobernanza (GRC) y ciberdefensa técnica</b>. Experiencia en administración de sistemas Linux/Windows, redes TCP/IP y desarrollo de herramientas de automatización en Python.
+                Profesional con perfil híbrido enfocado en la resolución de desafíos complejos de <b>gobernanza (GRC), ciberdefensa técnica y derecho informático</b>. Experiencia práctica en simulación de entorno de red industrial, administración de sistemas (Linux/Windows), análisis de registros y automatización defensiva con Python.
             </p>
             <div class="action-bar">
                 <a class="btn mono" href="https://github.com/trujilloJT93" target="_blank"><i class="fab fa-github"></i> github</a>
@@ -304,13 +341,13 @@
             <div class="impact-card legal">
                 <h3><i class="fas fa-scale-balanced"></i> Visión Legal & Compliance</h3>
                 <span class="institution mono">UCA — Universidad Católica Argentina</span>
-                <p>Abogado con foco en marcos normativos, privacidad de datos, gestión de riesgos informáticos, cadena de custodia de evidencia digital e investigación de ciberdelitos (GRC).</p>
+                <p>Abogado con marco analítico para evaluación de riesgos, adecuación a leyes de Protección de Datos Personales, gestión de incidentes normativos y preservación de evidencia digital con trazabilidad de cadena de custodia.</p>
             </div>
 
             <div class="impact-card tech">
                 <h3><i class="fas fa-shield-halved"></i> Ciberdefensa Técnica</h3>
-                <span class="institution mono">FADENA — 10 Materias Aprobadas</span>
-                <p>Formación operativa en arquitectura de redes, análisis de tráfico y protocolos, hardening de sistemas operativos y desarrollo de scripts defensivos en Python.</p>
+                <span class="institution mono">FADENA — Facultad de la Defensa Nacional</span>
+                <p>Formación operativa enfocada en arquitectura de redes de datos, captura y análisis de tráfico de red, hardening de sistemas operativos y programación de herramientas defensivas orientadas a la automatización.</p>
             </div>
         </div>
 
@@ -333,61 +370,83 @@
             </div>
         </section>
 
-        <!-- PROYECTOS -->
+        <!-- PROYECTOS TÉCNICOS & INGENIERÍA DE SOFTWARE -->
         <section class="section-block">
-            <h2><i class="fas fa-terminal" style="color: var(--accent-teal);"></i> Proyectos Destacados</h2>
+            <h2><i class="fas fa-terminal" style="color: var(--accent-teal);"></i> Desarrollos Técnicos & Ingeniería Aplicada</h2>
             
             <div class="project-list">
                 <!-- FLAGSHIP -->
                 <div class="project-card featured">
                     <div class="project-header-row">
-                        <h3 class="project-name" style="color: var(--accent-amber);">🏭 SentinelOT Engine</h3>
-                        <span class="badge-featured mono">FLAGSHIP PROJECT</span>
+                        <h3 class="project-name" style="color: var(--accent-amber);">🏭 SentinelOT Engine — Plataforma de Monitoreo SCADA/OT</h3>
+                        <span class="badge-featured mono">FLAGSHIP SYSTEM</span>
                     </div>
                     <p class="project-desc">
-                        Sistema para monitoreo y análisis de seguridad en redes industriales (OT/ICS). Genera telemetría asíncrona de protocolos SCADA, detecta anomalías en tiempo real, aplica control de acceso por roles (RBAC JWT) y automatiza reportes de auditoría en CSV.
+                        Desarrollo e implementación de una plataforma integral de ciberdefensa para infraestructuras críticas (OT/ICS). El sistema simula sensores industriales y entornos de control de procesos para detección proactiva de amenazas.
                     </p>
+                    <ul class="metrics-list">
+                        <li><b>Métricas de Procesamiento:</b> Arquitectura asíncrona (FastAPI/Asyncio) optimizada para procesar telemetría e hilos concurrentes en tiempo real.</li>
+                        <li><b>Seguridad & Compliance:</b> Módulo de autenticación JWT con control de acceso granular basado en roles (RBAC) y trazabilidad completa de acciones.</li>
+                        <li><b>Auditoría Operativa:</b> Generación automatizada de reportes consolidados en formato CSV estructurado para auditorías GRC e inspección de incidentes.</li>
+                    </ul>
                     <div class="tags-wrapper mono" style="margin-bottom: 16px;">
                         <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">Python</span>
                         <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">FastAPI</span>
                         <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">Asyncio</span>
                         <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">SQLAlchemy</span>
-                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">OT Security</span>
+                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">OT/ICS Security</span>
                     </div>
-                    <a class="btn mono" href="https://github.com/trujilloJT93/sentinel-ot" target="_blank"><i class="fab fa-github"></i> Repositorio & Documentación</a>
+                    <a class="btn mono" href="https://github.com/trujilloJT93/sentinel-ot" target="_blank"><i class="fab fa-github"></i> Repositorio & Arquitectura</a>
                 </div>
 
                 <!-- SECUNDARIOS -->
                 <div class="secondary-projects">
                     <div class="project-card">
-                        <h3 class="project-name">📡 Network Port Scanner</h3>
-                        <p class="project-desc">Herramienta en Python para escaneo multihilo de puertos TCP y evaluación de superficie de ataque en redes locales.</p>
+                        <h3 class="project-name">📡 Multithreaded Port Scanner</h3>
+                        <p class="project-desc">Herramienta de auditoría activa de redes. Realiza reconocimiento multihilo sobre rangos de IP, identificando servicios abiertos y reduciendo tiempos de escaneo en infraestructura local.</p>
                         <div class="tags-wrapper mono" style="margin-bottom: 16px;">
                             <span class="tag-item">Python</span>
                             <span class="tag-item">Sockets</span>
-                            <span class="tag-item">Recon</span>
+                            <span class="tag-item">Reconnaissance</span>
                         </div>
-                        <a class="btn mono" href="https://github.com/trujilloJT93/network-port-scanner" target="_blank"><i class="fab fa-github"></i> Código</a>
+                        <a class="btn mono" href="https://github.com/trujilloJT93/network-port-scanner" target="_blank"><i class="fab fa-github"></i> Código Fuente</a>
                     </div>
 
                     <div class="project-card">
-                        <h3 class="project-name">🛡️ Security Log Analyzer</h3>
-                        <p class="project-desc">Script de automatización para auditoría de registros auth.log, detección de fuerza bruta y patrones anómalos.</p>
+                        <h3 class="project-name">🛡️ Security Log Parsing Engine</h3>
+                        <p class="project-desc">Motor de parsing e inspección automatizada para registros `auth.log`. Detecta vectores de ataque por fuerza bruta SSH y anomalías mediante expresiones regulares complejas.</p>
                         <div class="tags-wrapper mono" style="margin-bottom: 16px;">
                             <span class="tag-item">Python</span>
                             <span class="tag-item">RegEx</span>
-                            <span class="tag-item">SOC Log Analysis</span>
+                            <span class="tag-item">SIEM Log Analysis</span>
                         </div>
-                        <a class="btn mono" href="https://github.com/trujilloJT93/security-log-analyzer" target="_blank"><i class="fab fa-github"></i> Código</a>
+                        <a class="btn mono" href="https://github.com/trujilloJT93/security-log-analyzer" target="_blank"><i class="fab fa-github"></i> Código Fuente</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FORMACIÓN -->
+        <!-- PRÁCTICAS OPERATIVAS & CASOS DE USO -->
         <section class="section-block">
-            <h2><i class="fas fa-graduation-cap" style="color: var(--accent-purple);"></i> Formación Académica</h2>
-            <div style="font-size: 0.93em; display: flex; flex-direction: column; gap: 8px;">
+            <h2><i class="fas fa-microchip" style="color: var(--accent-purple);"></i> Prácticas Operativas & Laboratorios</h2>
+            
+            <div class="secondary-projects">
+                <div class="lab-card">
+                    <div class="lab-title"><i class="fas fa-network-wired"></i> Análisis de Tráfico & Protocolos</div>
+                    <p class="project-desc" style="margin-bottom: 0;"> Captura y disección de paquetes mediante Wireshark y tshark en laboratorios controlados. Diagnóstico de flujos TCP/IP, detección de datos no cifrados y análisis de anomalías en redes corporativas simuladas.</p>
+                </div>
+
+                <div class="lab-card">
+                    <div class="lab-title"><i class="fas fa-file-contract"></i> Compliance & Dictámenes GRC</div>
+                    <p class="project-desc" style="margin-bottom: 0;">Elaboración de informes de evaluación de riesgos normativos, simulando la adecuación de infraestructuras IT a marcos de privacidad, planes de respuesta ante incidentes e integridad de evidencia digital.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMACIÓN ACADÉMICA -->
+        <section class="section-block">
+            <h2><i class="fas fa-graduation-cap" style="color: var(--accent-amber);"></i> Formación Académica</h2>
+            <div style="font-size: 0.93em; display: flex; flex-direction: column; gap: 10px;">
                 <div><b>Abogado</b> — Universidad Católica Argentina (UCA)</div>
                 <div><b>Licenciatura en Ciberdefensa</b> — Facultad de la Defensa Nacional (FADENA) <span class="mono" style="color: var(--text-muted); font-size: 0.85em;">[10 materias aprobadas]</span></div>
             </div>
