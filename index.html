@@ -5,265 +5,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesús Trujillo | Cyberdefense & Legal Tech</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #080c10;
-            --card-bg: #0d1117;
-            --border-color: #30363d;
-            --accent-green: #00ff66;
-            --accent-cyan: #58a6ff;
-            --accent-purple: #bc8cff;
-            --accent-gold: #ffb703;
-            --text-main: #e6edf3;
-            --text-muted: #8b949e;
+            --bg-body: #0b0f17;
+            --bg-card: #111827;
+            --bg-card-hover: #1f293d;
+            --bg-tag: #1e293b;
+            
+            --border-subtle: #1e293b;
+            --border-medium: #334155;
+            
+            --text-title: #f8fafc;
+            --text-body: #cbd5e1;
+            --text-muted: #64748b;
+            
+            --accent-blue: #38bdf8;
+            --accent-teal: #2dd4bf;
+            --accent-amber: #fbbf24;
+            --accent-purple: #c084fc;
         }
 
         * { box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, monospace;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-body);
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 920px;
+            max-width: 880px;
             width: 100%;
         }
 
-        /* Header con estética de Terminal / SOC */
-        .terminal-header {
-            background-color: var(--card-bg);
-            border: 1px solid var(--accent-green);
-            border-radius: 8px;
-            padding: 28px;
-            box-shadow: 0 0 15px rgba(0, 255, 102, 0.12);
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
+        .mono {
+            font-family: 'Fira Code', monospace;
         }
 
-        .terminal-header::before {
-            content: "● ● ● CYBERDEFENSE_NODE // ONLINE";
-            position: absolute;
-            top: 10px;
-            right: 18px;
-            font-size: 0.72em;
-            color: var(--accent-green);
-            letter-spacing: 1px;
-            font-family: monospace;
+        /* HEADER PROFESIONAL */
+        .profile-header {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-medium);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
         }
 
-        .status-badge {
-            display: inline-block;
-            background: rgba(0, 255, 102, 0.1);
-            color: var(--accent-green);
-            border: 1px solid var(--accent-green);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .system-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78em;
+            color: var(--accent-teal);
+            background: rgba(45, 212, 191, 0.08);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-teal);
+            border-radius: 50%;
         }
 
         h1 {
-            color: #ffffff;
-            font-size: 2.2em;
-            margin: 10px 0 5px 0;
-            letter-spacing: -0.5px;
+            color: var(--text-title);
+            font-size: 2em;
+            font-weight: 700;
+            margin: 0 0 6px 0;
+            letter-spacing: -0.02em;
         }
 
-        .tagline {
-            color: var(--accent-cyan);
+        .subtitle {
+            color: var(--accent-blue);
             font-size: 1.05em;
-            font-weight: 600;
-            margin-bottom: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
         }
 
-        .action-buttons {
+        .bio {
+            color: var(--text-body);
+            font-size: 0.95em;
+            margin-bottom: 24px;
+            max-width: 760px;
+        }
+
+        .action-bar {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
 
-        .btn-cyber {
-            background: #161b22;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            padding: 9px 16px;
+        .btn {
+            background: var(--bg-tag);
+            color: var(--text-title);
+            border: 1px solid var(--border-medium);
+            padding: 8px 16px;
             border-radius: 6px;
             text-decoration: none;
             font-size: 0.88em;
             font-weight: 500;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
 
-        .btn-cyber:hover {
-            border-color: var(--accent-green);
-            color: var(--accent-green);
-            box-shadow: 0 0 10px rgba(0, 255, 102, 0.18);
-            transform: translateY(-2px);
+        .btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
         }
 
-        .btn-flagship {
-            border-color: rgba(255, 183, 3, 0.4);
-            color: var(--accent-gold);
-        }
-
-        .btn-flagship:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-            box-shadow: 0 0 10px rgba(255, 183, 3, 0.25);
-        }
-
-        /* Sección Doble Perfil de Impacto */
-        .impact-grid {
+        /* GRID DE IMPACTO / PERFIL HÍBRIDO */
+        .dual-impact {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .impact-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            transition: border-color 0.3s;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 24px;
         }
 
-        .impact-card.legal { border-left: 4px solid var(--accent-purple); }
-        .impact-card.tech { border-left: 4px solid var(--accent-green); }
-
         .impact-card h3 {
-            margin-top: 0;
-            font-size: 1.1em;
+            margin: 0 0 12px 0;
+            font-size: 1em;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .impact-card.legal h3 { color: var(--accent-purple); }
-        .impact-card.tech h3 { color: var(--accent-green); }
+        .impact-card.tech h3 { color: var(--accent-teal); }
 
-        .card-block {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
+        .impact-card .institution {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .impact-card p {
+            margin: 0;
+            font-size: 0.9em;
+            color: var(--text-body);
+        }
+
+        /* SECCIONES Y TARJETAS */
+        .section-block {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
         }
 
         h2 {
-            color: var(--accent-cyan);
-            font-size: 1.25em;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-            margin-top: 0;
-            margin-bottom: 20px;
+            color: var(--text-title);
+            font-size: 1.15em;
+            font-weight: 600;
+            margin: 0 0 20px 0;
             display: flex;
             align-items: center;
             gap: 10px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 12px;
         }
 
-        .skill-tags {
+        /* TAGS TÉCNICOS SOBRIOS */
+        .tags-wrapper {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
-        .tag {
-            background: rgba(88, 166, 255, 0.08);
-            color: var(--accent-cyan);
-            border: 1px solid rgba(88, 166, 255, 0.25);
-            border-radius: 4px;
+        .tag-item {
+            background: var(--bg-tag);
+            color: var(--text-body);
+            border: 1px solid var(--border-medium);
             padding: 4px 10px;
-            font-size: 0.82em;
-            font-family: monospace;
+            border-radius: 5px;
+            font-size: 0.8em;
         }
 
-        .tag-gold {
-            background: rgba(255, 183, 3, 0.08);
-            color: var(--accent-gold);
-            border-color: rgba(255, 183, 3, 0.3);
-        }
-
-        /* Estructura de Proyectos */
-        .projects-grid {
+        /* ESTILOS DE PROYECTOS */
+        .project-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
-        .project-box {
-            border: 1px solid var(--border-color);
-            background: #080c10;
-            padding: 22px;
+        .project-card {
+            border: 1px solid var(--border-subtle);
+            background: rgba(15, 23, 42, 0.6);
             border-radius: 8px;
-            transition: all 0.3s ease;
-            position: relative;
+            padding: 20px;
+            transition: border-color 0.2s ease;
         }
 
-        .project-box:hover {
-            border-color: var(--accent-green);
+        .project-card:hover {
+            border-color: var(--border-medium);
         }
 
-        .project-box.flagship {
-            border-color: rgba(255, 183, 3, 0.4);
-            background: linear-gradient(180deg, #0a0e14 0%, #080c10 100%);
+        .project-card.featured {
+            border-color: rgba(251, 191, 36, 0.3);
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.6) 100%);
         }
 
-        .project-box.flagship:hover {
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 15px rgba(255, 183, 3, 0.1);
+        .project-card.featured:hover {
+            border-color: var(--accent-amber);
         }
 
-        .badge-flagship {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: rgba(255, 183, 3, 0.15);
-            color: var(--accent-gold);
-            border-left: 1px solid rgba(255, 183, 3, 0.4);
-            border-bottom: 1px solid rgba(255, 183, 3, 0.4);
-            padding: 3px 10px;
-            font-size: 0.7em;
-            font-family: monospace;
-            font-weight: bold;
-            border-bottom-left-radius: 6px;
-            letter-spacing: 0.5px;
-        }
-
-        .project-header {
+        .project-header-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        .project-title {
+        .project-name {
+            font-size: 1.05em;
+            font-weight: 600;
+            color: var(--text-title);
             margin: 0;
-            font-size: 1.15em;
         }
 
-        .secondary-grid {
+        .badge-featured {
+            font-size: 0.7em;
+            color: var(--accent-amber);
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .project-desc {
+            font-size: 0.88em;
+            color: var(--text-muted);
+            margin: 8px 0 16px 0;
+        }
+
+        .secondary-projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 18px;
+            gap: 16px;
         }
 
         footer {
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.85em;
-            padding: 20px 0;
+            font-size: 0.82em;
+            padding-top: 10px;
         }
     </style>
 </head>
@@ -271,151 +282,119 @@
 
     <div class="container">
 
-        <!-- HEADER TÁCTICO -->
-        <header class="terminal-header">
-            <div class="status-badge">🟢 DISPONIBLE FULL-TIME // ROSARIO, ARGENTINA</div>
+        <!-- PROFILE HEADER -->
+        <header class="profile-header">
+            <div class="system-status mono">
+                <span class="status-dot"></span> ROSARIO, ARGENTINA // DISPONIBLE FULL-TIME
+            </div>
             <h1>Jesús Gregorio Trujillo Camacho</h1>
-            <div class="tagline">Abogado (UCA) & Estudiante de Licenciatura en Ciberdefensa (FADENA)</div>
-            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; font-size: 0.95em;">
-                Perfil híbrido estratégico: Combinación de rigor legal y cumplimiento normativo con capacidades técnicas de administración de sistemas (Linux/Windows), análisis de redes TCP/IP y programación con Python.
+            <div class="subtitle">Abogado (UCA) & Licenciatura en Ciberdefensa (FADENA)</div>
+            <p class="bio">
+                Profesional con perfil híbrido orientado a la intersección entre <b>derecho informático, gobernanza (GRC) y ciberdefensa técnica</b>. Experiencia en administración de sistemas Linux/Windows, redes TCP/IP y desarrollo de herramientas de automatización en Python.
             </p>
-            <div class="action-buttons">
-                <a class="btn-cyber" href="https://github.com/trujilloJT93" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a class="btn-cyber" href="https://www.linkedin.com/in/jesus-trujillo-bb2750424" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a class="btn-cyber" href="mailto:trujillocamachog@gmail.com"><i class="fas fa-envelope"></i> Contactar</a>
+            <div class="action-bar">
+                <a class="btn mono" href="https://github.com/trujilloJT93" target="_blank"><i class="fab fa-github"></i> github</a>
+                <a class="btn mono" href="https://www.linkedin.com/in/jesus-trujillo-bb2750424" target="_blank"><i class="fab fa-linkedin"></i> linkedin</a>
+                <a class="btn mono" href="mailto:trujillocamachog@gmail.com"><i class="fas fa-envelope"></i> email</a>
             </div>
         </header>
 
-        <!-- EL FACTOR DIFERENCIAL -->
-        <div class="impact-grid">
+        <!-- DUARTE IMPACT GRID -->
+        <div class="dual-impact">
             <div class="impact-card legal">
-                <h3><i class="fas fa-gavel"></i> Visión Legal & Compliance</h3>
-                <p style="font-size: 0.88em; color: var(--text-muted); margin-bottom: 8px;">
-                    <b>Abogado — Universidad Católica Argentina (UCA)</b>
-                </p>
-                <p style="font-size: 0.88em; line-height: 1.55; color: var(--text-main); margin: 0;">
-                    Comprensión profunda de marcos normativos, gestión de riesgos, privacidad de datos, peritaje e investigación de ciberdelitos y cumplimiento institucional (GRC).
-                </p>
+                <h3><i class="fas fa-scale-balanced"></i> Visión Legal & Compliance</h3>
+                <span class="institution mono">UCA — Universidad Católica Argentina</span>
+                <p>Abogado con foco en marcos normativos, privacidad de datos, gestión de riesgos informáticos, cadena de custodia de evidencia digital e investigación de ciberdelitos (GRC).</p>
             </div>
 
             <div class="impact-card tech">
-                <h3><i class="fas fa-shield-alt"></i> Ejecución Técnica & Defensa</h3>
-                <p style="font-size: 0.88em; color: var(--text-muted); margin-bottom: 8px;">
-                    <b>Lic. en Ciberdefensa — FADENA (10 Materias Aprobadas)</b>
-                </p>
-                <p style="font-size: 0.88em; line-height: 1.55; color: var(--text-main); margin: 0;">
-                    Análisis de vulnerabilidades, arquitectura de redes, administración de sistemas operativos y desarrollo de herramientas de automatización en Python.
-                </p>
+                <h3><i class="fas fa-shield-halved"></i> Ciberdefensa Técnica</h3>
+                <span class="institution mono">FADENA — 10 Materias Aprobadas</span>
+                <p>Formación operativa en arquitectura de redes, análisis de tráfico y protocolos, hardening de sistemas operativos y desarrollo de scripts defensivos en Python.</p>
             </div>
         </div>
 
-        <!-- HABILIDADES TÉCNICAS -->
-        <div class="card-block">
-            <h2><i class="fas fa-code"></i> Stack Técnico & Herramientas</h2>
-            <div class="skill-tags">
-                <span class="tag">Python 3</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">SQLAlchemy</span>
-                <span class="tag">Linux (Ubuntu/Debian)</span>
-                <span class="tag">Windows Server</span>
-                <span class="tag">Análisis TCP/IP</span>
-                <span class="tag">Seguridad OT/ICS</span>
-                <span class="tag">Wireshark</span>
-                <span class="tag">Sockets / Networking</span>
-                <span class="tag">Log Analysis & RegEx</span>
-                <span class="tag">Bash Scripting</span>
-                <span class="tag">Git & GitHub</span>
-                <span class="tag">Evidencia Digital & GRC</span>
+        <!-- STACK TÉCNICO -->
+        <section class="section-block">
+            <h2><i class="fas fa-layer-group" style="color: var(--accent-blue);"></i> Stack Técnico & Competencias</h2>
+            <div class="tags-wrapper mono">
+                <span class="tag-item">Python 3</span>
+                <span class="tag-item">FastAPI</span>
+                <span class="tag-item">SQLAlchemy</span>
+                <span class="tag-item">Linux (Debian/Ubuntu)</span>
+                <span class="tag-item">Windows Server</span>
+                <span class="tag-item">Redes TCP/IP</span>
+                <span class="tag-item">Seguridad OT/ICS</span>
+                <span class="tag-item">Wireshark</span>
+                <span class="tag-item">Análisis de Logs & RegEx</span>
+                <span class="tag-item">Bash Scripting</span>
+                <span class="tag-item">Git / GitHub</span>
+                <span class="tag-item">Evidencia Digital</span>
             </div>
-        </div>
+        </section>
 
-        <!-- PORTAFOLIO DE PROYECTOS -->
-        <div class="card-block">
-            <h2><i class="fas fa-folder-open"></i> Proyectos & Desarrollo de Ciberdefensa</h2>
+        <!-- PROYECTOS -->
+        <section class="section-block">
+            <h2><i class="fas fa-terminal" style="color: var(--accent-teal);"></i> Proyectos Destacados</h2>
             
-            <div class="projects-grid">
-
-                <!-- PROYECTO DESTACADO / FLAGSHIP: SENTINEL_OT -->
-                <div class="project-box flagship">
-                    <span class="badge-flagship"><i class="fas fa-star"></i> PROYECTO PRINCIPAL</span>
-                    
-                    <div class="project-header">
-                        <div>
-                            <h3 class="project-title" style="color: var(--accent-gold);">🏭 SentinelOT Engine</h3>
-                            <span style="font-size: 0.8em; color: var(--text-muted); font-family: monospace;">Sistema SCADA/SIEM para Monitoreo de Redes Industriales</span>
-                        </div>
+            <div class="project-list">
+                <!-- FLAGSHIP -->
+                <div class="project-card featured">
+                    <div class="project-header-row">
+                        <h3 class="project-name" style="color: var(--accent-amber);">🏭 SentinelOT Engine</h3>
+                        <span class="badge-featured mono">FLAGSHIP PROJECT</span>
                     </div>
-
-                    <p style="font-size: 0.9em; color: var(--text-muted); line-height: 1.6; margin: 12px 0 16px 0;">
-                        Plataforma full-stack para el monitoreo y gestión de seguridad en infraestructuras industriales (OT/ICS). Incorpora telemetría asíncrona simulada (Modbus/Profinet), detección de anomalías en tiempo real, autenticación JWT con control de acceso por roles (RBAC) y exportación de reportes de auditoría en CSV para cumplimiento normativo.
+                    <p class="project-desc">
+                        Sistema para monitoreo y análisis de seguridad en redes industriales (OT/ICS). Genera telemetría asíncrona de protocolos SCADA, detecta anomalías en tiempo real, aplica control de acceso por roles (RBAC JWT) y automatiza reportes de auditoría en CSV.
                     </p>
-
-                    <div class="skill-tags" style="margin-bottom: 18px;">
-                        <span class="tag tag-gold">Python / FastAPI</span>
-                        <span class="tag tag-gold">Asyncio</span>
-                        <span class="tag tag-gold">SQLAlchemy</span>
-                        <span class="tag tag-gold">OT/ICS Security</span>
-                        <span class="tag tag-gold">Audit Reports</span>
+                    <div class="tags-wrapper mono" style="margin-bottom: 16px;">
+                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">Python</span>
+                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">FastAPI</span>
+                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">Asyncio</span>
+                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">SQLAlchemy</span>
+                        <span class="tag-item" style="border-color: rgba(251, 191, 36, 0.3);">OT Security</span>
                     </div>
-
-                    <a class="btn-cyber btn-flagship" href="https://github.com/trujilloJT93/sentinel-ot" target="_blank">
-                        <i class="fab fa-github"></i> Ver Código Fuente & Documentación
-                    </a>
+                    <a class="btn mono" href="https://github.com/trujilloJT93/sentinel-ot" target="_blank"><i class="fab fa-github"></i> Repositorio & Documentación</a>
                 </div>
 
-                <!-- GRILLA PARA PROYECTOS SECUNDARIOS -->
-                <div class="secondary-grid">
-                    
-                    <!-- Proyecto 2: Port Scanner -->
-                    <div class="project-box">
-                        <h3 class="project-title" style="color: var(--accent-green); font-size: 1.05em; margin-bottom: 6px;">
-                            📡 Network Port Scanner
-                        </h3>
-                        <p style="font-size: 0.88em; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                            Herramienta interactiva en Python nativo para el escaneo multihilo de puertos TCP y diagnóstico de superficie de ataque en infraestructura local.
-                        </p>
-                        <div class="skill-tags" style="margin-bottom: 16px;">
-                            <span class="tag">Python</span>
-                            <span class="tag">Sockets</span>
-                            <span class="tag">Recon</span>
+                <!-- SECUNDARIOS -->
+                <div class="secondary-projects">
+                    <div class="project-card">
+                        <h3 class="project-name">📡 Network Port Scanner</h3>
+                        <p class="project-desc">Herramienta en Python para escaneo multihilo de puertos TCP y evaluación de superficie de ataque en redes locales.</p>
+                        <div class="tags-wrapper mono" style="margin-bottom: 16px;">
+                            <span class="tag-item">Python</span>
+                            <span class="tag-item">Sockets</span>
+                            <span class="tag-item">Recon</span>
                         </div>
-                        <a class="btn-cyber" href="https://github.com/trujilloJT93/network-port-scanner" target="_blank">
-                            <i class="fab fa-github"></i> Repositorio
-                        </a>
+                        <a class="btn mono" href="https://github.com/trujilloJT93/network-port-scanner" target="_blank"><i class="fab fa-github"></i> Código</a>
                     </div>
 
-                    <!-- Proyecto 3: Log Analyzer -->
-                    <div class="project-box">
-                        <h3 class="project-title" style="color: var(--accent-green); font-size: 1.05em; margin-bottom: 6px;">
-                            🛡️ Security Log Analyzer
-                        </h3>
-                        <p style="font-size: 0.88em; color: var(--text-muted); line-height: 1.5; margin-bottom: 14px;">
-                            Script de automatización para el análisis de registros de autenticación (`auth.log`), identificando ataques de fuerza bruta y anomalías mediante RegEx.
-                        </p>
-                        <div class="skill-tags" style="margin-bottom: 16px;">
-                            <span class="tag">Python</span>
-                            <span class="tag">SOC Monitoring</span>
-                            <span class="tag">RegEx</span>
+                    <div class="project-card">
+                        <h3 class="project-name">🛡️ Security Log Analyzer</h3>
+                        <p class="project-desc">Script de automatización para auditoría de registros auth.log, detección de fuerza bruta y patrones anómalos.</p>
+                        <div class="tags-wrapper mono" style="margin-bottom: 16px;">
+                            <span class="tag-item">Python</span>
+                            <span class="tag-item">RegEx</span>
+                            <span class="tag-item">SOC Log Analysis</span>
                         </div>
-                        <a class="btn-cyber" href="https://github.com/trujilloJT93/security-log-analyzer" target="_blank">
-                            <i class="fab fa-github"></i> Repositorio
-                        </a>
+                        <a class="btn mono" href="https://github.com/trujilloJT93/security-log-analyzer" target="_blank"><i class="fab fa-github"></i> Código</a>
                     </div>
-
                 </div>
-
             </div>
-        </div>
+        </section>
 
-        <!-- FORMACIÓN ACADÉMICA -->
-        <div class="card-block">
-            <h2><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
-            <p style="margin: 8px 0;"><b>Abogado</b> — Universidad Católica Argentina (UCA)</p>
-            <p style="margin: 8px 0;"><b>Licenciatura en Ciberdefensa</b> — Facultad de la Defensa Nacional (FADENA) <i style="color: var(--text-muted); font-size: 0.9em;">[10 materias aprobadas]</i></p>
-        </div>
+        <!-- FORMACIÓN -->
+        <section class="section-block">
+            <h2><i class="fas fa-graduation-cap" style="color: var(--accent-purple);"></i> Formación Académica</h2>
+            <div style="font-size: 0.93em; display: flex; flex-direction: column; gap: 8px;">
+                <div><b>Abogado</b> — Universidad Católica Argentina (UCA)</div>
+                <div><b>Licenciatura en Ciberdefensa</b> — Facultad de la Defensa Nacional (FADENA) <span class="mono" style="color: var(--text-muted); font-size: 0.85em;">[10 materias aprobadas]</span></div>
+            </div>
+        </section>
 
-        <footer>
-            <p>© Jesús Gregorio Trujillo Camacho | Rosario, Santa Fe, Argentina | Disponibilidad Full-Time</p>
+        <footer class="mono">
+            <p>© Jesús Gregorio Trujillo Camacho • Rosario, Santa Fe, Argentina</p>
         </footer>
 
     </div>
