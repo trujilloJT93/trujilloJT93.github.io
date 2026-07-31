@@ -86,64 +86,52 @@
           ✉️ Email
         </a>
       </div>
-    </section>
+    <section id="projects" class="projects-section">
+    <div class="container">
+        <h2>Mis Proyectos de Ciberseguridad</h2>
+        <div class="projects-grid">
 
+            <!-- Proyecto 1: Auto-GRC -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>🛡️ Auto-GRC</h3>
+                    <span class="badge">GRC / Compliance</span>
+                </div>
+                <p>Plataforma integral automatizada para la gestión continua de riesgos, cumplimiento normativo y auditorías de seguridad en infraestructuras tecnológicas.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQLite</span>
+                    <span>Docker</span>
+                    <span>Bootstrap 5</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/trujilloJT93/AUTO-GRC" target="_blank" class="btn-github">Ver Repositorio</a>
+                </div>
+            </div>
 
-    <!-- 2. DUALIDAD (PILARES) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-[#111827] border border-slate-800 rounded-xl p-6 hover:border-purple-500/40 transition">
-        <div class="flex items-center gap-2 text-purple-400 font-semibold mb-2">
-          <span>⚖️</span>
-          <h3>Visión Legal & Compliance</h3>
+            <!-- Proyecto 2: SIEM & Incident Suite -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>🛡️ SIEM & Incident Suite</h3>
+                    <span class="badge">SOC / Analytics</span>
+                </div>
+                <p>Plataforma avanzada de análisis, correlación de eventos y enriquecimiento de logs de seguridad orientada a operaciones SOC, con mapeo MITRE ATT&CK.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQLite</span>
+                    <span>Jinja2</span>
+                    <span>Docker</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/trujilloJT93/SIEM-INCIDENT-SUITE" target="_blank" class="btn-github">Ver Repositorio</a>
+                </div>
+            </div>
+
         </div>
-        <p class="text-xs text-slate-400 mb-3 font-mono">UCA — Universidad Católica Argentina</p>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          Abogado con marco analítico para evaluación de riesgos, adecuación a leyes de Protección de Datos Personales, gestión de incidentes normativos y preservación de evidencia digital con trazabilidad de cadena de custodia.
-        </p>
-      </div>
-
-      <div class="bg-[#111827] border border-slate-800 rounded-xl p-6 hover:border-cyan-500/40 transition">
-        <div class="flex items-center gap-2 text-cyan-400 font-semibold mb-2">
-          <span>🛡️</span>
-          <h3>Ciberdefensa Técnica</h3>
-        </div>
-        <p class="text-xs text-slate-400 mb-3 font-mono">FADENA — Facultad de La Defensa Nacional</p>
-        <p class="text-sm text-slate-300 leading-relaxed">
-          Formación operativa enfocada en arquitectura de redes de datos, captura y análisis de tráfico de red, hardening de sistemas operativos y programación de herramientas defensivas orientadas a la automatización.
-        </p>
-      </div>
     </div>
-
-
-    <!-- 3. STACK TÉCNICO INTERACTIVO -->
-    <section class="bg-[#111827] border border-slate-800 rounded-xl p-6">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-2 text-slate-200 font-semibold">
-          <span>⚙️</span>
-          <h3>Stack Técnico & Competencias</h3>
-        </div>
-        <span class="text-[11px] font-mono text-cyan-400/80 bg-cyan-950/50 border border-cyan-800/40 px-2 py-0.5 rounded">
-          💡 Haz clic en una tecnología
-        </span>
-      </div>
-      
-      <!-- Tags Interactivos -->
-      <div class="flex flex-wrap gap-2 font-mono text-xs">
-        <button onclick="showTechInfo('Python 3')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300 hover:border-cyan-400">Python 3</button>
-        <button onclick="showTechInfo('FastAPI')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300 hover:border-cyan-400">FastAPI</button>
-        <button onclick="showTechInfo('SQLAlchemy')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-cyan-300 hover:border-cyan-400">SQLAlchemy</button>
-        <button onclick="showTechInfo('Linux')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Linux (Debian/Ubuntu)</button>
-        <button onclick="showTechInfo('Windows Server')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Windows Server</button>
-        <button onclick="showTechInfo('Redes TCP/IP')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Redes TCP/IP</button>
-        <button onclick="showTechInfo('Seguridad OT/ICS')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-amber-300 hover:border-amber-400">Seguridad OT/ICS</button>
-        <button onclick="showTechInfo('Wireshark')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-amber-300 hover:border-amber-400">Wireshark</button>
-        <button onclick="showTechInfo('Análisis de Logs')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Análisis de Logs & RegEx</button>
-        <button onclick="showTechInfo('Bash Scripting')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Bash Scripting</button>
-        <button onclick="showTechInfo('Git')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-slate-300 hover:border-slate-400">Git / GitHub</button>
-        <button onclick="showTechInfo('Evidencia Digital')" class="tech-tag px-2.5 py-1 bg-slate-800 border border-slate-700 rounded text-purple-300 hover:border-purple-400">Evidencia Digital</button>
-      </div>
-    </section>
-
+</section>
 
     <!-- 4. DESARROLLOS TÉCNICOS & INGENIERÍA APLICADA -->
     <section class="bg-[#111827] border border-slate-800 rounded-xl p-6 space-y-6">
