@@ -188,44 +188,6 @@
         </div>
       </div>
 
-      <!-- FLAGSHIP PROJECT: Data Breach Notification Assistant -->
-      <div class="project-card bg-[#0B0F17] border border-emerald-500/40 rounded-xl p-6 relative hover:border-emerald-500/70 transition" data-category="legal">
-        <div class="flex items-center justify-between mb-3">
-          <div class="flex items-center gap-2">
-            <span>⚖️</span>
-            <h4 class="font-bold text-white text-base">Data Breach Notification Assistant — Motor Multi-Jurisdiccional</h4>
-          </div>
-          <span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] tracking-wider uppercase rounded">
-            Derecho + Ciberdefensa
-          </span>
-        </div>
-
-        <p class="text-xs text-slate-400 mb-4 leading-relaxed">
-          Motor que evalúa las obligaciones de notificación de un incidente con impacto en datos personales cruzando el caso contra tres marcos normativos en paralelo: Ley 25.326 (Argentina/AAIP), GDPR (UE, arts. 33/34) y CCPA/CPRA + Cal. Civ. Code § 1798.82 (California). Traduce hechos técnicos de un incidente en una respuesta jurídica estructurada y con plazos concretos por jurisdicción.
-        </p>
-
-        <ul class="space-y-2 text-xs text-slate-300 mb-5 list-disc list-inside">
-          <li><strong class="text-slate-100">Motor de reglas por jurisdicción:</strong> un mismo incidente puede activar más de un marco normativo a la vez; el motor determina si aplica, si corresponde notificar a la autoridad de control y a los titulares, y en qué plazo, para cada una.</li>
-          <li><strong class="text-slate-100">Doble interfaz sobre un único núcleo:</strong> CLI interactiva y por flags (Click) para uso local/scripting, y API REST (FastAPI) con Swagger para integración.</li>
-          <li><strong class="text-slate-100">Informes de auditoría:</strong> generación de reportes estructurados en JSON y PDF, listos para respaldar una decisión de notificación real ante un incidente.</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-2 font-mono text-[11px] mb-3">
-          <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-          <span onclick="showTechInfo('FastAPI')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">FastAPI</span>
-          <span onclick="showTechInfo('Click CLI')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Click (CLI)</span>
-          <span onclick="showTechInfo('Ley 25.326')" class="tech-tag px-2 py-0.5 bg-emerald-950/60 border border-emerald-800/50 text-emerald-300 rounded">Ley 25.326</span>
-          <span onclick="showTechInfo('GDPR')" class="tech-tag px-2 py-0.5 bg-emerald-950/60 border border-emerald-800/50 text-emerald-300 rounded">GDPR</span>
-          <span onclick="showTechInfo('CCPA/CPRA')" class="tech-tag px-2 py-0.5 bg-emerald-950/60 border border-emerald-800/50 text-emerald-300 rounded">CCPA/CPRA</span>
-        </div>
-
-        <p class="text-[10px] text-slate-500 italic mb-4">Proyecto de portafolio con fines educativos y de demostración técnica; la lógica normativa está simplificada y no constituye asesoramiento legal.</p>
-
-        <a href="https://github.com/trujilloJT93/breach-notify-assistant" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition">
-          🐙 Repositorio & Arquitectura
-        </a>
-      </div>
-
       <!-- FLAGSHIP PROJECT: SentinelOT -->
       <div class="project-card bg-[#0B0F17] border border-amber-500/40 rounded-xl p-6 relative hover:border-amber-500/70 transition" data-category="ot">
         <div class="flex items-center justify-between mb-3">
@@ -257,6 +219,41 @@
         </div>
 
         <a href="https://github.com/trujilloJT93/sentinel-ot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition">
+          🐙 Repositorio & Arquitectura
+        </a>
+      </div>
+
+      <!-- FLAGSHIP PROJECT: Data Breach Notification Assistant -->
+      <div class="project-card bg-[#0B0F17] border border-pink-500/40 rounded-xl p-6 relative hover:border-pink-500/70 transition" data-category="legal">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-2">
+            <span>⚖️</span>
+            <h4 class="font-bold text-white text-base">Data Breach Notification Assistant</h4>
+          </div>
+          <span class="px-2 py-0.5 bg-pink-500/10 border border-pink-500/30 text-pink-400 font-mono text-[10px] tracking-wider uppercase rounded">
+            LEGAL-TECH
+          </span>
+        </div>
+
+        <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+          Herramienta que evalúa las obligaciones de notificación de un incidente de datos personales cruzando el caso contra tres marcos normativos en simultáneo: Ley 25.326 (Argentina), GDPR (Unión Europea) y CCPA/Cal. Civ. Code § 1798.82 (California). Diseñada y validada desde mi propia formación como abogado, no solo como ejercicio técnico.
+        </p>
+
+        <ul class="space-y-2 text-xs text-slate-300 mb-5 list-disc list-inside">
+          <li><strong class="text-slate-100">Motor de reglas multi-jurisdicción:</strong> un mismo incidente se evalúa en paralelo contra las tres normativas, determinando si corresponde notificar a la autoridad, a los titulares, y en qué plazo.</li>
+          <li><strong class="text-slate-100">Doble interfaz:</strong> CLI interactiva para uso rápido y API REST (FastAPI, con Swagger) para integración con otros sistemas.</li>
+          <li><strong class="text-slate-100">Informes profesionales:</strong> generación de reportes en JSON estructurado y PDF, listos para presentar a un DPO o a la gerencia.</li>
+        </ul>
+
+        <div class="flex flex-wrap gap-2 font-mono text-[11px] mb-4">
+          <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
+          <span onclick="showTechInfo('FastAPI')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">FastAPI</span>
+          <span onclick="showTechInfo('Click CLI')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Click</span>
+          <span onclick="showTechInfo('ReportLab PDF')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">ReportLab</span>
+          <span onclick="showTechInfo('Ley 25.326 / GDPR / CCPA')" class="tech-tag px-2 py-0.5 bg-pink-950/60 border border-pink-800/50 text-pink-300 rounded">Ley 25.326 · GDPR · CCPA</span>
+        </div>
+
+        <a href="https://github.com/trujilloJT93/breach-notify-assistant" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono rounded border border-slate-700 transition">
           🐙 Repositorio & Arquitectura
         </a>
       </div>
@@ -440,11 +437,6 @@
             <h4 class="font-bold text-slate-100 text-sm">Capacitación Continua en Infraestructura & Seguridad</h4>
             <p class="text-slate-400">Especialización autodidacta en hardening de sistemas, arquitectura Cloud y automatización defensiva.</p>
           </div>
-          <hr class="border-slate-800">
-          <div>
-            <h4 class="font-bold text-slate-100 text-sm">Idiomas</h4>
-            <p class="text-slate-400">Español (nativo) · Inglés (técnico — lectura y documentación profesional).</p>
-          </div>
         </div>
       </section>
     </div>
@@ -502,10 +494,9 @@
       'JSON Export': 'Estructuración y exportación estandarizada de datos de incidentes y auditorías para consumo en SIEMs y dashboards.',
       'HTTP Headers': 'Análisis de cabeceras de respuesta HTTP (CSP, HSTS, X-Frame-Options) para endurecimiento defensivo web.',
       'Web Audit': 'Técnicas de auditoría pasiva y activa de postura de seguridad en aplicaciones y APIs web.',
-      'Click CLI': 'Construcción de interfaces de línea de comandos en Python con modo interactivo y modo por flags, pensadas tanto para uso manual como para scripting/CI.',
-      'Ley 25.326': 'Ley de Protección de Datos Personales de Argentina. Modelado de sus criterios de notificación de incidentes junto con las guías de la AAIP.',
-      'GDPR': 'Reglamento General de Protección de Datos de la Unión Europea (UE 2016/679). Implementación de la lógica de notificación de brechas de los artículos 33 y 34, incluido el plazo de 72 horas a la autoridad de control.',
-      'CCPA/CPRA': 'Marco de privacidad de California (CCPA/CPRA y Cal. Civ. Code § 1798.82). Modelado de la obligación de notificación a titulares y al Attorney General según volumen de residentes afectados.'
+      'Click CLI': 'Framework de Python para construir interfaces de línea de comandos: flags, prompts interactivos y validación de tipos.',
+      'ReportLab PDF': 'Generación programática de documentos PDF: tablas, estilos y maquetado profesional para informes de auditoría.',
+      'Ley 25.326 / GDPR / CCPA': 'Motor de reglas que evalúa un mismo incidente contra tres marcos normativos en paralelo: Ley 25.326 (Argentina), GDPR (arts. 33 y 34) y CCPA/Cal. Civ. Code § 1798.82 (California).'
     };
 
     function showTechInfo(tech) {
@@ -557,9 +548,9 @@
 
     const commands = {
       'help': 'Comandos disponibles: <span class="text-cyan-400">about</span>, <span class="text-cyan-400">skills</span>, <span class="text-cyan-400">projects</span>, <span class="text-cyan-400">contact</span>, <span class="text-cyan-400">clear</span>',
-      'about': 'Jesús G. Trujillo Camacho — Abogado (UCA) y estudiante de Licenciatura en Ciberdefensa (FADENA). Perfil híbrido en GRC, SOC e infraestructura OT.',
-      'skills': 'Python, FastAPI, Docker, SQLAlchemy, Redes TCP/IP, Wireshark, Seguridad OT/ICS, GRC (ISO 27001 / NIST), Protección de Datos (Ley 25.326 / GDPR / CCPA), Linux, Bash Scripting.',
-      'projects': '1. Data Breach Notification Assistant\n2. Auto-GRC\n3. SIEM Incident Suite\n4. SentinelOT Engine\n5. SIEM Lite & Log Analyzer\n6. ISO 27001 Risk Calculator\n7. Web Security Header Scanner',
+      'about': 'Jesús G. Trujillo Camacho — Abogado (UCA) y estudiante de Licenciatura en Ciberdefensa (FADENA). Perfil híbrido en GRC, SOC, legal-tech e infraestructura OT.',
+      'skills': 'Python, FastAPI, Docker, SQLAlchemy, Redes TCP/IP, Wireshark, Seguridad OT/ICS, GRC (ISO 27001 / NIST), Legal-Tech (Ley 25.326 / GDPR / CCPA), Linux, Bash Scripting.',
+      'projects': '1. Auto-GRC\n2. SIEM Incident Suite\n3. SentinelOT Engine\n4. Data Breach Notification Assistant\n5. SIEM Lite & Log Analyzer\n6. ISO 27001 Risk Calculator\n7. Web Security Header Scanner',
       'contact': 'Email: trujillojt93@gmail.com | LinkedIn: /in/jesus-trujillo-camacho | GitHub: @trujilloJT93'
     };
 
