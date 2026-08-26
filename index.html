@@ -80,12 +80,12 @@
       
       <!-- Titular -->
       <p class="text-purple-400 font-semibold text-lg mb-4 font-mono">
-        Abogado (UCA) | Cursando Lic. en Ciberdefensa (FADENA)
+        Analista Junior GRC / Data Privacy — Perfil híbrido Legal + Tecnología
       </p>
 
       <!-- Resumen -->
       <p class="text-slate-400 text-sm leading-relaxed max-w-3xl mb-6">
-        Profesional con perfil híbrido enfocado en la resolución de desafíos complejos de <strong class="text-slate-200">gobernanza y cumplimiento (GRC)</strong>, <strong class="text-slate-200">ciberdefensa técnica y derecho informático</strong>. Experiencia práctica en simulación de redes industriales, automatización de auditorías, análisis de registros y desarrollo de soluciones defensivas escalables con Python.
+        Abogado (UCA) especializado en protección de datos, en transición activa hacia <strong class="text-slate-200">GRC</strong> mientras curso la Licenciatura en Ciberdefensa (FADENA/UNDEF). Leo una regulación y la traduzco directamente a un control técnico verificable — desarrollé herramientas propias en Python que automatizan esa lectura cruzada entre norma y código.
       </p>
 
       <!-- Botones de Acción -->
@@ -110,35 +110,24 @@
 
     <!-- 2. PLATAFORMAS ENTERPRISE -->
     <section id="projects" class="bg-[#111827] border border-slate-800 rounded-xl p-6 space-y-6">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-800 pb-4 gap-3">
-        <div class="flex items-center gap-2 text-slate-200 font-semibold">
-          <span class="text-cyan-400 font-mono">>_</span>
-          <h3>Plataformas Full-Stack, GRC & SOC</h3>
-        </div>
-        
-        <!-- Pestañas de Filtro Interactivas -->
-        <div class="flex flex-wrap gap-1.5 font-mono text-xs">
-          <button onclick="filterProjects('all')" id="btn-all" class="px-3 py-1 bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 rounded transition">Todos</button>
-          <button onclick="filterProjects('grc')" id="btn-grc" class="px-3 py-1 bg-slate-800 text-slate-400 hover:text-slate-200 rounded transition">GRC</button>
-          <button onclick="filterProjects('soc')" id="btn-soc" class="px-3 py-1 bg-slate-800 text-slate-400 hover:text-slate-200 rounded transition">SOC/SIEM</button>
-          <button onclick="filterProjects('ot')" id="btn-ot" class="px-3 py-1 bg-slate-800 text-slate-400 hover:text-slate-200 rounded transition">OT/ICS</button>
-          <button onclick="filterProjects('legal')" id="btn-legal" class="px-3 py-1 bg-slate-800 text-slate-400 hover:text-slate-200 rounded transition">Legal-Tech</button>
-        </div>
+      <div class="flex items-center gap-2 text-slate-200 font-semibold border-b border-slate-800 pb-4">
+        <span class="text-cyan-400 font-mono">>_</span>
+        <h3>Proyecto GRC destacado</h3>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 gap-4">
         <!-- Proyecto: Auto-GRC -->
         <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="grc">
           <div>
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-white text-sm">🛡️ Auto-GRC</h4>
+              <h4 class="font-bold text-white text-sm">🛡️ Auto-GRC — Plataforma de Cumplimiento Automatizado</h4>
               <span class="px-2 py-0.5 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-[10px] rounded">GRC / ISO 27001 / NIST</span>
             </div>
             <p class="text-xs text-slate-400 mb-3 leading-relaxed">
               Plataforma integral automatizada para la gestión continua de riesgos y cumplimiento normativo en infraestructuras tecnológicas.
             </p>
             <div class="bg-slate-900/60 border border-slate-800/80 p-2.5 rounded text-[11px] text-slate-300 mb-4 font-mono">
-              <span class="text-emerald-400 font-bold">⚡ Impacto:</span> Automatización de evaluaciones frente a marcos normativos, reduciendo drásticamente los tiempos de auditoría manual.
+              <span class="text-emerald-400 font-bold">⚡ Impacto:</span> Reemplaza checklists manuales de auditoría por una evaluación automatizada frente a 2 marcos normativos, estandarizando el criterio entre auditores y reduciendo el tiempo de relevamiento.
             </div>
             <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
               <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">Python</span>
@@ -151,31 +140,6 @@
             🐙 Ver Repositorio & Arquitectura
           </a>
         </div>
-
-        <!-- Proyecto: SIEM & Incident Suite -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="soc">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-white text-sm">🛡️ SIEM & Incident Suite</h4>
-              <span class="px-2 py-0.5 bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-[10px] rounded">SOC / MITRE ATT&CK</span>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Plataforma avanzada de análisis, correlación de eventos y enriquecimiento de logs orientada a operaciones SOC y respuesta a incidentes.
-            </p>
-            <div class="bg-slate-900/60 border border-slate-800/80 p-2.5 rounded text-[11px] text-slate-300 mb-4 font-mono">
-              <span class="text-emerald-400 font-bold">⚡ Rendimiento:</span> Procesamiento masivo de registros con persistencia optimizada y mapeo heurístico automatizado.
-            </div>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">Python</span>
-              <span onclick="showTechInfo('FastAPI')" class="tech-tag px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">FastAPI</span>
-              <span onclick="showTechInfo('SQLAlchemy')" class="tech-tag px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">SQLite</span>
-              <span onclick="showTechInfo('Jinja2')" class="tech-tag px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded border border-slate-700">Jinja2</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93/SIEM-INCIDENT-SUITE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Ver Repositorio & Arquitectura
-          </a>
-        </div>
       </div>
     </section>
 
@@ -184,7 +148,7 @@
       <div class="flex items-center justify-between border-b border-slate-800 pb-3">
         <div class="flex items-center gap-2 text-slate-200 font-semibold">
           <span class="text-cyan-400 font-mono">>_</span>
-          <h3>Desarrollos Técnicos & Ingeniería Aplicada</h3>
+          <h3>Proyectos Flagship & Otras Herramientas</h3>
         </div>
       </div>
 
@@ -261,138 +225,47 @@
         </a>
       </div>
 
-      <!-- OTROS PROYECTOS TÉCNICOS (6 PROYECTOS EN MATRIZ DE 2 COLUMNAS) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
-        <!-- Proyecto 1: SIEM Lite -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="soc">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-white text-sm">🛡️ SIEM Lite & Log Analyzer</h4>
-              <span class="px-2 py-0.5 bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-[10px] rounded">SOC / ISO 27001</span>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Analizador de registros de auditoría SSH en tiempo real. Extrae origen de ataques vía expresiones regulares, detecta vectores de fuerza bruta y mapea alertas automáticas al Control A.8.16 de la ISO 27001.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-              <span onclick="showTechInfo('Análisis de Logs')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">RegEx</span>
-              <span onclick="showTechInfo('JSON Export')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">JSON Export</span>
-              <span onclick="showTechInfo('ISO 27001')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">ISO 27001:2022</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93/siem-log-analyzer" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Código Fuente & Documentación
-          </a>
-        </div>
+      <!-- OTRAS HERRAMIENTAS (LISTA COMPACTA, NO COMPITEN CON LOS 3 PROYECTOS PRINCIPALES) -->
+      <div class="pt-2">
+        <h4 class="text-slate-500 font-mono text-[11px] uppercase tracking-wider mb-3">Otras herramientas del portafolio</h4>
+        <div class="divide-y divide-slate-800/80 border border-slate-800/80 rounded-lg overflow-hidden">
 
-        <!-- Proyecto 2: ISO 27001 Risk Calculator -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="grc">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-white text-sm">📋 ISO 27001 Risk Assessment Calculator</h4>
-              <span class="px-2 py-0.5 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-[10px] rounded">GRC / ISO 27005</span>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Herramienta CLI interactiva para la evaluación de riesgos de información. Emplea matriz 5x5 (Probabilidad x Impacto) y asigna controles automáticos del Anexo A de ISO 27001:2022.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-              <span onclick="showTechInfo('ISO 27005')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">ISO 27005</span>
-              <span onclick="showTechInfo('Risk Matrix')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Risk Matrix</span>
-              <span onclick="showTechInfo('JSON Export')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">JSON Export</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93/iso27001-risk-calculator" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Código Fuente & Documentación
+          <a href="https://github.com/trujilloJT93/SIEM-INCIDENT-SUITE" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">SIEM & Incident Suite</strong> — correlación de eventos y mapeo a MITRE ATT&CK</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
           </a>
-        </div>
 
-        <!-- Proyecto 3: Web Security Header Scanner -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="soc">
-          <div>
-            <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-white text-sm">🔍 Web Security Header Scanner</h4>
-              <span class="px-2 py-0.5 bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-[10px] rounded">AppSec / Audit</span>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Escáner defensivo de auditoría HTTP para aplicaciones web. Valida la presencia e implementación de cabeceras de protección defensivas (CSP, HSTS, X-Frame-Options) y exporta dictámenes JSON.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-              <span onclick="showTechInfo('HTTP Headers')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">HTTP Headers</span>
-              <span onclick="showTechInfo('Web Audit')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Web Audit</span>
-              <span onclick="showTechInfo('JSON Export')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">JSON Export</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93/web-security-scanner" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Código Fuente & Documentación
+          <a href="https://github.com/trujilloJT93/siem-log-analyzer" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">SIEM Lite & Log Analyzer</strong> — detección de fuerza bruta SSH mapeada a ISO 27001 A.8.16</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
           </a>
-        </div>
 
-        <!-- Proyecto 4: Multithreaded Port Scanner -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="soc">
-          <div>
-            <div class="flex items-center gap-2 font-semibold text-white text-sm mb-2">
-              <span>🔬</span>
-              <h4>Multithreaded Port Scanner</h4>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Herramienta de auditoría activa de redes. Realiza reconocimiento multihilo sobre rangos de IP, identificando servicios abiertos y reduciendo tiempos de escaneo en infraestructura local.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-              <span onclick="showTechInfo('Sockets')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Sockets</span>
-              <span onclick="showTechInfo('Reconnaissance')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Reconnaissance</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Código Fuente
+          <a href="https://github.com/trujilloJT93/iso27001-risk-calculator" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">ISO 27001 Risk Assessment Calculator</strong> — matriz 5x5 con asignación automática de controles del Anexo A</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
           </a>
-        </div>
 
-        <!-- Proyecto 5: Security Log Parsing Engine -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="soc">
-          <div>
-            <div class="flex items-center gap-2 font-semibold text-white text-sm mb-2">
-              <span>🛡️</span>
-              <h4>Security Log Parsing Engine</h4>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Motor de parsing e inspección automatizada para registros 'auth.log'. Detecta vectores de ataque por fuerza bruta SSH y anomalías mediante expresiones regulares complejas.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-              <span onclick="showTechInfo('Análisis de Logs')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">RegEx</span>
-              <span onclick="showTechInfo('Análisis de Logs')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">SIEM Log Analysis</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Código Fuente
+          <a href="https://github.com/trujilloJT93/web-security-scanner" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">Web Security Header Scanner</strong> — auditoría de cabeceras HTTP (CSP, HSTS, X-Frame-Options)</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
           </a>
-        </div>
 
-        <!-- Proyecto 6: Automated Incident Response Scripts -->
-        <div class="project-card bg-[#0B0F17] border border-slate-800 rounded-lg p-5 hover:border-slate-700 transition flex flex-col justify-between" data-category="soc">
-          <div>
-            <div class="flex items-center gap-2 font-semibold text-white text-sm mb-2">
-              <span>⚡</span>
-              <h4>Automated Incident Containment</h4>
-            </div>
-            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-              Scripts defensivos en Bash y Python para respuesta rápida ante incidentes. Automatiza la aplicación de reglas iptables, aislamiento de hosts y bloqueo de IPs atacantes.
-            </p>
-            <div class="flex flex-wrap gap-1.5 font-mono text-[10px] mb-4">
-              <span onclick="showTechInfo('Python 3')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Python</span>
-              <span onclick="showTechInfo('Sockets')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">Bash</span>
-              <span onclick="showTechInfo('Análisis de Logs')" class="tech-tag px-2 py-0.5 bg-slate-800 text-slate-300 rounded">iptables / fail2ban</span>
-            </div>
-          </div>
-          <a href="https://github.com/trujilloJT93" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:underline">
-            🐙 Código Fuente
+          <a href="https://github.com/trujilloJT93" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">Multithreaded Port Scanner</strong> — reconocimiento multihilo de servicios abiertos</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
           </a>
-        </div>
 
+          <a href="https://github.com/trujilloJT93" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">Security Log Parsing Engine</strong> — parsing de auth.log con RegEx para vectores de fuerza bruta</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
+          </a>
+
+          <a href="https://github.com/trujilloJT93" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between gap-3 px-4 py-2.5 bg-[#0B0F17] hover:bg-slate-900/60 transition">
+            <span class="text-xs text-slate-300"><strong class="text-slate-100">Automated Incident Containment</strong> — scripts de aislamiento de hosts y bloqueo de IPs (iptables/fail2ban)</span>
+            <span class="text-cyan-400 font-mono text-[11px] shrink-0">🐙 Repo</span>
+          </a>
+
+        </div>
       </div>
     </section>
 
@@ -533,28 +406,7 @@
       if (e.key === 'Escape') closeTechModal();
     });
 
-    // SISTEMA DE FILTRADO DE PROYECTOS
-    function filterProjects(category) {
-      const cards = document.querySelectorAll('.project-card');
-      const buttons = ['all', 'grc', 'soc', 'ot', 'legal'];
-
-      buttons.forEach(btn => {
-        const el = document.getElementById(`btn-${btn}`);
-        if (btn === category) {
-          el.className = "px-3 py-1 bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 rounded transition";
-        } else {
-          el.className = "px-3 py-1 bg-slate-800 text-slate-400 hover:text-slate-200 rounded transition";
-        }
-      });
-
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
+    // (Sistema de filtrado de proyectos eliminado junto con las pestañas de filtro)
 
     // TERMINAL INTERACTIVA CLI
     const terminalInput = document.getElementById('terminalInput');
